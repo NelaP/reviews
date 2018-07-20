@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css" type="text/css">
   <title>Restaurant Info</title>
@@ -9,34 +10,34 @@
 
 <body class="inside">
   <header>
-    <nav>
-      <h1>
-        <a href="/">Restaurant Reviews</a>
-      </h1>
+    <h1>
+      <a href="/">Restaurant Reviews</a>
+    </h1>
+    <nav aria-label="Breadcrumb">
+      <ul id="breadcrumb">
+        <li>
+          <a href="/">Home</a>
+        </li>
+      </ul>
     </nav>
-    <ul id="breadcrumb">
-      <li>
-        <a href="/">Home</a>
-      </li>
-    </ul>
   </header>
 
   <main id="maincontent">
-    <section id="map-container">
-      <div id="map"></div>
-    </section>
+    <map id="map" tabindex="-1" role="widget"></map>
 
-    <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
-      <img id="restaurant-img">
-      <p id="restaurant-cuisine"></p>
-      <p id="restaurant-address"></p>
-      <table id="restaurant-hours"></table>
-    </section>
+    <div id="restaurant-details">
+      <section id="restaurant-container">
+        <h2 id="restaurant-name"></h2>
+        <img id="restaurant-img">
+        <p id="restaurant-cuisine"></p>
+        <address id="restaurant-address"></address>
+        <table id="restaurant-hours"></table>
+      </section>
 
-    <section id="reviews-container">
-      <ul id="reviews-list"></ul>
-    </section>
+      <section id="reviews-container">
+        <ul id="reviews-list"></ul>
+      </section>
+    </div>
   </main>
 
   <footer id="footer">
@@ -50,7 +51,7 @@
 
   <script type="text/javascript" src="js/dbhelper.js"></script>
   <script type="text/javascript" src="js/restaurant_info.js"></script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_tKbW6A5pQ-eupxI56myUnHLqYCzOjKo&libraries=places&callback=initMap"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBMOu_VThG-uHHYg2oZLOrTgV9m0WZcH9s&libraries=places&callback=initMap"></script>
 
 </body>
 
